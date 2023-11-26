@@ -1,0 +1,820 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100vh;
+}
+
+body{
+    font-family: "Helvetica Now Text", "Lucida Sans", Tahoma, sans-serif;
+    line-height: 1.5;
+    background-color: #F7F7F7;
+}
+a{
+    text-decoration: none;
+}
+::selection{
+    color:whitesmoke;
+    background-color: black;
+}
+
+
+/* NAVBAR */
+
+.navlinks{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 40px;
+    color: black;
+}
+.logo h1{
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 30px;
+    font-family:"Futura Now Headline", "Lucida Sans", Tahoma, sans-serif;
+}
+.navbar{
+    display: flex;
+}
+.navbar h6{
+    font-size: 13px;
+    margin: 25px;
+    cursor: pointer;
+}
+.icon{
+    display: flex;
+    
+}
+
+/* HIDDEN BAR */
+
+.hidden{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: absolute;
+    color: white;
+    margin-top: -100vh;
+    transition: 0.5s linear;
+}
+.bar-menu{
+    height: 98vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content:space-between;
+}
+.menu1 {
+    cursor: pointer;
+    margin: 11vh 5vh;
+    z-index: 99;
+}
+.menu1 h4 {
+    margin: 25px 0;
+    color: #5E5E5E;
+    z-index: 99;
+}
+
+.menu2 {
+    cursor: pointer;
+    margin: 11vh 5vh;
+    z-index: 99;
+}
+.menu2 h4 {
+    margin: 25px 0;
+    color: #5E5E5E;
+}
+
+.menu3{
+    cursor: pointer;
+    margin: 40px;
+    text-align: right;
+    line-height: 3.6em;
+    z-index: 99;
+}
+.menu3 h2{
+    font-size: 65px;
+}
+.clickmenu{
+    margin: 0;
+}
+
+/* PAGE1 */
+.page1{
+    text-align: center;
+    line-height: normal;
+    font-size: 17.5vh;
+    font-weight: 900;
+    padding: 28.3vh 0;
+    line-height: 1.6em;
+    letter-spacing: -0.16em;
+    font-family:"Futura Now Headline", "Lucida Sans", Tahoma, sans-serif;
+    height: 90vh;
+}
+
+.moblehidden{
+    display: flex;
+}
+/* PAGE 2 */
+
+.page2{
+    width:100%;
+    margin: auto;
+    position: relative;
+    opacity: 1;
+}
+.page2 img{
+    width: 100%;
+    height: 85%;
+}
+.buy h2{
+    font-weight: 900;
+    font-family:"Futura Now Headline", "Lucida Sans", Tahoma, sans-serif;
+    font-size: 20px;
+    z-index: 99;
+    position: absolute;
+    left: 65.5%;
+    top: 21%;
+}
+.svglatter{
+    font-weight: 100;
+    font-family:"Futura ", "Lucida Sans", Tahoma, sans-serif;
+    font-size: 35px;
+    z-index: 99;
+    position: absolute;
+    left: 60%;
+    max-width: 100%;
+    top: 10%;
+    animation: rotating 8s linear infinite;
+}
+@keyframes rotating {
+    from {
+      transform: rotate(366deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
+
+
+.page3{
+    width: 90%;
+    margin: auto;
+}
+.good{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 700;
+    border-bottom: 2px solid black;
+  }
+.gallery{
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.products{ 
+    width: 32%;
+    position: relative;
+    height: 85vh;
+}
+.products img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.middle1,.middle2,.middle3{
+    width: 58%;
+    height: 7vh;
+    background-color: #E5F0D6;
+    border-radius: 20px;
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    transform: translate(-50% -50%);
+    overflow: hidden;
+    transition: all 0.2s linear;
+}
+.middle2{
+    background-color:#F5DFCF ;
+}
+.middle3{
+    background-color:#FFFFFF ;
+}
+.black{
+    background-color: black;
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    left: 7%;
+    margin: 24px 10px;
+}
+.shop{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    padding-left: 20px;
+    margin: 18px;
+}
+.shop h6{
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0 4.5vh;
+}
+
+.shop h5{
+    font-weight: 600;
+    white-space: nowrap;
+}
+.grid{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    align-items: center;
+    justify-content:center;
+    position: absolute;
+    margin: 20px 0;
+    opacity: 0;
+}
+.cat1 img{
+    margin: 20px 20px;
+}
+.cat1 p {
+    margin-bottom: 20px;
+    margin-left:8px;
+    text-align: center;
+    font-size:13.5px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.cat2 p {
+    margin-bottom: 10px;
+    margin-left:25px;
+    font-size:13.5px;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.middle1{
+    background-color: #e5f0d6;
+}
+.middle1:hover{
+    height: 280px;
+}
+.middle2:hover{
+    height: 280px;
+}
+.middle3:hover{
+    height: 280px;
+}
+.grid:hover{
+    opacity: 1;
+}
+
+
+/* PAGE 4 */
+.page4{
+    width: 100%;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+    
+}
+
+.grid-item {
+    padding: 20px;
+    text-align: center;
+}
+.grid-item h4{
+    text-align: left;
+    font-size: 7.5vh;
+    line-height: 1em;
+    font-weight: 900;
+    font-family: "Futura Now Headline", "Lucida Sans", Tahoma, sans-serif;
+}
+.grid-item1 {
+    width: 58%;
+    margin: auto;
+    padding: 25px;
+}
+.btn{
+    border: none;
+    background-color: transparent;
+    margin:5vh 0 ; 
+    border-bottom: 1px solid black;
+}
+.footerm h4{
+    color: #5E5E5E;
+    font-weight: 400;
+    padding: 20px 0;
+    text-transform: uppercase;
+}
+.footerm h5{
+    font-weight: 600;
+}
+.footerm1 h4{
+    color: #5E5E5E;
+    font-weight: 400;
+    padding: 20px 0;
+    text-transform: uppercase;
+}
+.footerm1 h5{
+    font-weight: 600;
+}
+.footerlogo{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+.footerlogo img{
+    width: 60%;
+    margin: auto;
+}
+.foomiddle{
+    display: flex;
+    gap: 30px;
+    padding: 25px 0;
+    color: #5E5E5E;
+    font-size: 12px;
+}
+
+/* GRID ONLINE */
+.grid-container1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; 
+    z-index: 99;
+    text-align: center;
+  }
+
+  .grid-items{
+    padding: 20px; /* Padding inside each grid item */
+    text-align: center;
+    z-index: 99;
+  }
+ .grid-items1 {
+    padding: 20px; /* Padding inside each grid item */
+    text-align: center;
+    z-index: 99;
+  }
+  .grid-items img{
+    width: 100%;
+  }
+  .grid-items1 img{
+    width: 66%;
+  }
+  .grid-items3 img{
+    width: 100%;
+  }
+  .color{
+    position: relative;
+    padding: 5vw;
+    background-color:#E6E6E6;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    opacity: 0;
+  }
+  .color1{
+    position: relative;
+    padding: 5vw;
+    background-color:pink;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    opacity: 0;
+  }
+
+  .grid-container2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; 
+    z-index: 99;
+    text-align: center;
+  }
+
+  .grid-items3{
+    padding: 20px; /* Padding inside each grid item */
+    text-align: center;
+    z-index: 99;
+  }
+ .grid-items4 {
+    padding: 20px; /* Padding inside each grid item */
+    text-align: center;
+    z-index: 99;
+  }
+  .grid-items3 img{
+    z-index: 99;
+    width: 66%;
+  }
+  .grid-items3 p{
+    padding-right: 8.5vw;
+  }
+  .grid-items4 img{
+    width: 100%;
+    z-index: 99;
+  }
+.grid-items5 img{
+    width: 70%;
+}
+.grid-items6 img{
+    padding: 110px 0;
+}
+.grid-items6{
+    padding: 70px 0;
+}
+.center{
+    width: 90%;
+    margin: auto;
+    padding: 25vh 0;
+    text-align: center;
+    font-size: 7.2vh;
+    line-height: 9.5vh;
+    font-weight: 900;
+    font-family: "Futura Now Headline";
+}
+
+.lastline{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom:2px solid black;
+    width: 98%;
+    margin: auto;
+}
+.lastbutton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.btn1{
+    background-color: black;
+    color: whitesmoke;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+
+.lastgrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 1fr means one fraction of the available space */
+    gap: 10px; /* Adjust the gap between grid items as needed */
+}
+
+/* Style for grid items (placeholders for content) */
+.grid-last {
+    padding: 80px 10px;
+    text-align: left;
+}
+.grid-last img{
+    width: 100%;
+}
+.grid-last h3{
+    padding: 50px 0;
+    font-size: 2.5vw;
+    font-weight: 900;
+    font-family: "Futura Now Headline";
+}
+.grid-last h6{
+    padding: 15px 0;
+    font-size: 14px;
+    font-weight: 200;
+}
+.footertop h2{
+    font-size: 5.3vh;
+}
+.footertop{
+    width: 98%;
+    margin: auto;
+    border-bottom: 1px solid black;
+}
+
+.footermiddle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10vh 1vh;
+}
+.fotterbottom{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    font-size: 12px;
+}
+.moble-cc{
+    display: none;
+}
+  @media (max-width:600px) {
+    .logo{
+        width: 100%;
+        position: relative;
+    }
+    .logo h1{
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 23px;
+        font-family:"Futura Now Headline", "Lucida Sans", Tahoma, sans-serif;
+    }
+    .hidden{
+        width: 100%;
+        height: 90vh;
+        position: relative;
+    }
+
+    .moblehidden{
+        display: none;
+    }
+    .bar-menu{
+        height: 65vh;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        z-index: 99;
+    }
+    .menu1{
+        position: relative;
+        top: 15px;
+        left: 24.5vh;
+    }
+    .menu2{
+        position: relative;
+        top: -45vh;
+    }
+    .menu3{
+        position: relative;
+        top: -53vh; 
+        margin: 20px 18px;
+        text-align: right;
+        line-height: 1.7em;
+        text-align: left;
+    }
+    .menu3 h2{
+        font-size: 30px;
+    }
+    .page1{
+        text-align: center;
+        line-height: normal;
+        font-size: 4.9vh;
+        font-weight: 900;
+        padding: 40.5vh 0vh;
+        line-height: 1.6em;
+        letter-spacing: -0.16em;
+        font-family:"Futura Now Headline", "Lucida Sans", Tahoma, sans-serif;
+        height:60vh;
+    }
+    .page2{
+        width:100%;
+        margin: auto;
+        top: -18vh;
+    }
+    .page2 img{
+        width: 100%;
+        height: 100%;
+    }
+    .buy h2{
+        font-weight: 900;
+        font-family:"Futura Now Headline", "Lucida Sans", Tahoma, sans-serif;
+        font-size: 18px;
+        z-index: 99;
+        left: 64%;
+        top:18%;
+    }
+    .svglatter{
+        font-weight: 100;
+        font-family:"Futura ", "Lucida Sans", Tahoma, sans-serif;
+        font-size: 20px;
+        z-index: 99;
+        left: 44%;
+        top: -18%;
+        animation: rotating 10s linear infinite;;
+    }
+    .gallery{
+        padding: 20px 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .products{ 
+        width: 100%;
+        height: 60vh;
+        margin: 8px 0;
+    }
+    .products img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .middle1,.middle2,.middle3{
+        width: 61%;
+        margin: auto;
+        height: 4.5vh;
+        background-color: #E5F0D6;
+        border-radius: 20px;
+        position: absolute;
+        left: 25%;
+        top: 50%;
+        transform: translate(-50% -50%);
+        overflow: hidden;
+        transition: all 0.2s linear;
+    }
+    .middle2{
+        background-color:#F5DFCF ;
+    }
+    .middle3{
+        background-color:#FFFFFF ;
+    }
+    .cat1 img{
+        margin: 0px 20px;
+    }
+    .cat1 p {
+        margin-bottom: 20px;
+        margin-left:8px;
+        text-align: center;
+        font-size:13.5px;
+        font-weight: 200;
+        text-transform: uppercase;
+    }
+    .cat2 p {
+        margin-bottom: 10px;
+        margin-left:25px;
+        font-size:13.5px;
+        text-align: center;
+        font-weight: 200;
+        text-transform: uppercase;
+    }
+    .middle1{
+        background-color: #e5f0d6;
+    }
+    .middle1:hover{
+        height: 280px;
+    }
+    .middle2:hover{
+        height: 280px;
+    }
+    .middle3:hover{
+        height: 280px;
+    }
+    .grid:hover{
+        opacity: 1;
+    }
+    .shop h6 {
+        font-size: 12px;
+        font-weight: 600;
+        margin: 0px 31px;
+    }
+    .shop {
+        display: flex;
+        padding-left: 0px;
+        margin: 5px -6px;
+    }
+    .black {
+        background-color: black;
+        border-radius: 50%;
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        left: 0%;
+        margin: 12px 11px;
+    }
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .grid-item h4{
+        text-align: center;
+        font-size: 7.5vw;
+        line-height: 1em;
+        font-weight: 900;
+        font-family: "Futura Now Headline", "Lucida Sans", Tahoma, sans-serif;
+    }
+    .grid-item1 {
+        width: 100%;
+        margin: auto;
+        padding: 20px 0;
+    }
+    .grid-item1 p{
+        text-align: center;
+        padding: 15px 0;
+    }
+    .btn{
+        position: relative;
+        left: 32%;
+        border: none;
+        padding: 8px 0;
+        border-bottom: 1px solid black;
+    }
+    .grid-items p{
+        font-size: 10px;
+      }
+     .grid-items1 p {
+        font-size: 10px;
+      }
+      .grid-items3 p{
+        font-size: 10px;
+    }
+      .grid-items4 p{
+        font-size: 10px;
+      }
+
+
+
+      .lastgrid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+    }
+    
+    /* Style for grid items (placeholders for content) */
+    .grid-last {
+        padding: 20px 10px;
+        text-align: left;
+        text-align: center;
+    }
+    .grid-last img{
+        width: 100%;
+    }
+    .grid-last h3{
+        padding: 20px 0;
+        font-size: 2.5vw;
+        font-weight: 900;
+        font-family: "Futura Now Headline";
+    }
+    .grid-last h6{
+        padding: 10px 0;
+        font-size: 14px;
+        font-weight: 200;
+    }
+    .footertop h2{
+        font-size: 5.3vh;
+    }
+    .grid-items5{
+        display: none;
+    }
+    .grid-items6{
+        display: none;
+    }
+    .color{
+        display: none;
+    }
+    .color1{
+        display: none;
+  }
+  .center{
+    width: 100%;
+    font-size: 3.2vh;
+    line-height: 50px;
+    padding: 60px 0;
+  }
+  .lastbutton p{
+    text-align: center;
+    padding: 30px 0;
+  }
+  .footertop h2{
+    font-size: 2vh;
+    text-align: center;
+    padding: 5px 0;
+  }
+   .footermiddle{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 40px;
+   }
+   .footerlogo{
+    display: none;
+   }
+   .footerm{
+    text-align: justify;
+   }
+   .footerm1{
+    text-align: right;
+   }
+   .fotterbottom{
+    width: 100%;
+    padding: 10px;
+    font-size: 10px;
+   }
+   .moble-cc{
+    padding: 25px 0;
+    display: flex;
+    color: #5E5E5E;
+    align-items: center;
+    justify-content: space-around;
+   }
+  }
